@@ -1,0 +1,14 @@
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Debug\net8.0\forth_mini.exe
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Debug\net8.0\forth_mini.deps.json
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Debug\net8.0\forth_mini.runtimeconfig.json
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Debug\net8.0\forth_mini.dll
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Debug\net8.0\forth_mini.pdb
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.AssemblyInfoInputs.cache
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.AssemblyInfo.cs
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.csproj.CoreCompileInputs.cache
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.dll
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\refint\forth_mini.dll
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.pdb
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\forth_mini.genruntimeconfig.cache
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Debug\net8.0\ref\forth_mini.dll
