@@ -1,0 +1,2 @@
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\publish\win-x64\forth_mini.pdb
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\publish\win-x64\forth_mini.exe

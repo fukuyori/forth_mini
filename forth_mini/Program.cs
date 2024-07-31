@@ -23,6 +23,32 @@ namespace forth_mini {
         }
 
         public int Count => stack.Count;
+
+        public object Pick(int n) {
+            if (n < 0 || n >= stack.Count) throw new InvalidOperationException("Invalid pick index");
+            var tempStack = new Stack<object>();
+            for (int i = 0; i < n; i++) {
+                tempStack.Push(stack.Pop());
+            }
+            var value = stack.Peek();
+            while (tempStack.Count > 0) {
+                stack.Push(tempStack.Pop());
+            }
+            return value;
+        }
+
+        public void Roll(int n) {
+            if (n < 0 || n >= stack.Count) throw new InvalidOperationException("Invalid roll index");
+            var tempStack = new Stack<object>();
+            for (int i = 0; i < n; i++) {
+                tempStack.Push(stack.Pop());
+            }
+            var value = stack.Pop();
+            while (tempStack.Count > 0) {
+                stack.Push(tempStack.Pop());
+            }
+            stack.Push(value);
+        }
     }
 
     public class Compiler {

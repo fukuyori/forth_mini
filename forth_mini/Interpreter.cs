@@ -11,6 +11,10 @@ namespace forth_mini {
         private Stack<int> loopStack = new Stack<int>(); // インデックススタック
         private Dictionary<string, Action> words = new Dictionary<string, Action>();
         private Queue<string> tokenQueue = new Queue<string>();
+        private Dictionary<string, List<string>> userWords = new Dictionary<string, List<string>>();
+        private bool isDefiningWord = false;
+        private string currentWordName;
+        private List<string> currentWordTokens;
 
         public Interpreter() {
             RegisterBasicWords();
@@ -193,6 +197,14 @@ namespace forth_mini {
                 var a = stack.Peek();
                 stack.Push(a);
             };
+            words["rot"] = () => {
+                var a = stack.Pop();
+                var b = stack.Pop();
+                var c = stack.Pop();
+                stack.Push(b);
+                stack.Push(a);
+                stack.Push(c);
+            };
             words["drop"] = () => stack.Pop();
             words["swap"] = () => {
                 var a = stack.Pop();
@@ -206,6 +218,23 @@ namespace forth_mini {
                 stack.Push(a);
                 stack.Push(b);
             };
+            words["tuck"] = () => {
+                var a = stack.Pop();
+                var b = stack.Pop();
+                stack.Push(a);
+                stack.Push(b);
+                stack.Push(a);
+            };
+            // pick と roll の追加
+            words["pick"] = () => {
+                var n = Convert.ToInt32(stack.Pop());
+                stack.Push(stack.Pick(n));
+            };
+            words["roll"] = () => {
+                var n = Convert.ToInt32(stack.Pop());
+                stack.Roll(n);
+            };
+            // 比較演算
             words["="] = () => {
                 var a = stack.Pop();
                 var b = stack.Pop();
@@ -227,6 +256,20 @@ namespace forth_mini {
                 var a = stack.Pop().ToString();
                 var b = stack.Pop().ToString();
                 stack.Push(b + a);
+            };
+
+            // ユーザー定義の単語の開始と終了を追加
+            words[":"] = () => {
+                isDefiningWord = true;
+                currentWordName = GetNextToken();
+                currentWordTokens = new List<string>();
+            };
+            words[";"] = () => {
+                if (!isDefiningWord) {
+                    throw new InvalidOperationException("No word is being defined");
+                }
+                isDefiningWord = false;
+                userWords[currentWordName] = new List<string>(currentWordTokens);
             };
 
             // 条件分岐の実装
@@ -331,6 +374,8 @@ namespace forth_mini {
                     stack.Push(token.Trim('"'));
                 } else if (words.ContainsKey(token)) {
                     words[token]();
+                } else if (userWords.ContainsKey(token)) {
+                    ExecuteTokens(userWords[token]);
                 } else {
                     throw new InvalidOperationException($"Unknown word: {token}");
                 }
@@ -338,21 +383,29 @@ namespace forth_mini {
         }
 
         public void Execute(string command) {
-            string _command = Regex.Replace(command, @"\s+", " ");
-            var tokens = Tokenize(_command);
+            //string _command = Regex.Replace(command, @"\s+", " ");
+            var tokens = Tokenize(command);
             foreach (var token in tokens) {
                 tokenQueue.Enqueue(token);
             }
 
             while (tokenQueue.Count > 0) {
                 var token = tokenQueue.Dequeue();
-                if (double.TryParse(token, out double number)) {
+                if (isDefiningWord) {
+                    if (token == ";") {
+                        words[";"]();
+                    } else {
+                        currentWordTokens.Add(token);
+                    }
+                } else if (double.TryParse(token, out double number)) {
                     stack.Push(number);
                 } else if (token.StartsWith("\"") && token.EndsWith("\"")) {
                     // 文字列リテラルとして処理
                     stack.Push(token.Trim('"'));
                 } else if (words.ContainsKey(token)) {
                     words[token]();
+                } else if (userWords.ContainsKey(token)) {
+                    ExecuteTokens(userWords[token]);
                 } else {
                     throw new InvalidOperationException($"Unknown word: {token}");
                 }
@@ -396,4 +449,3 @@ namespace forth_mini {
         }
     }
 }
-
