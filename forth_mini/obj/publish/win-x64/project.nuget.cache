@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "9VxGpZkBt1OnTfCfZJrC25pkeIqpmj7907/7fwjzvSlLlFZqDb/MaM5sTX/5Zmo1PY3W7gyrNypJtTqo3Y0sng==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\n_fuk\\Source\\Repos\\forth_mini\\forth_mini\\forth_mini.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.4\\microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.4\\microsoft.netcore.app.runtime.win-x64.8.0.4.nupkg.sha512",
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.4\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.4.nupkg.sha512",
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.4\\microsoft.aspnetcore.app.runtime.win-x64.8.0.4.nupkg.sha512"
+  ],
+  "logs": []
+}
