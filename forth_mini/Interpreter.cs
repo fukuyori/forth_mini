@@ -74,7 +74,7 @@ namespace forth_mini {
                 stack.Push(b % a);
                 stack.Push(Math.Floor(b / a));
             };
-            words["wi"] = () => {
+            words["pi"] = () => {
                 stack.Push(Math.PI);
             };
             words["e"] = () => {
