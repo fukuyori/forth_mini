@@ -8,6 +8,12 @@
 	<PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
     <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	  <VersionPrefix>0.5.3</VersionPrefix>
+	  <ApplicationIcon>淡いスカイブルー ライン入り 建設会社 ロゴ(1).ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="淡いスカイブルー ライン入り 建設会社 ロゴ(1).ico" />
+  </ItemGroup>
 
 </Project>

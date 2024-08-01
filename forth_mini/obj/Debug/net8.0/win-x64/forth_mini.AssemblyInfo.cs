@@ -13,11 +13,11 @@ using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("forth_mini")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6b9c095dee4ddf9dbf72df3b2b50bfc3c8538bde")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("0.5.3.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("0.5.3+9408e7b57a58a84dbda494ffb5fb5b862d9d1f53")]
 [assembly: System.Reflection.AssemblyProductAttribute("forth_mini")]
 [assembly: System.Reflection.AssemblyTitleAttribute("forth_mini")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: System.Reflection.AssemblyVersionAttribute("0.5.3.0")]
 
 // MSBuild WriteCodeFragment クラスによって生成されました。
 

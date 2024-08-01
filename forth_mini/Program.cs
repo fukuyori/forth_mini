@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -76,6 +77,8 @@ namespace forth_mini {
             var compiler = new Compiler(interpreter);
 
             // ユーザー入力を受け付けてインタープリターを実行
+            var version = Assembly.GetExecutingAssembly().GetName().Version;
+            Console.WriteLine("Forth mini Ver." + version + " by Spumoni");
             Console.WriteLine("Enter Forth commands (type 'exit' to quit):");
             string input;
             while ((input = Console.ReadLine()) != "exit") {

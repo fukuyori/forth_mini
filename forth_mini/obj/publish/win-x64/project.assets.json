@@ -81,13 +81,13 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "0.5.3",
     "restore": {
-      "projectUniqueName": "C:\\Users\\n_fuk\\Source\\Repos\\forth_mini\\forth_mini\\forth_mini.csproj",
+      "projectUniqueName": "C:\\Users\\n_fuk\\source\\repos\\forth_mini\\forth_mini\\forth_mini.csproj",
       "projectName": "forth_mini",
-      "projectPath": "C:\\Users\\n_fuk\\Source\\Repos\\forth_mini\\forth_mini\\forth_mini.csproj",
+      "projectPath": "C:\\Users\\n_fuk\\source\\repos\\forth_mini\\forth_mini\\forth_mini.csproj",
       "packagesPath": "C:\\Users\\n_fuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\n_fuk\\Source\\Repos\\forth_mini\\forth_mini\\obj\\publish\\win-x64\\",
+      "outputPath": "C:\\Users\\n_fuk\\source\\repos\\forth_mini\\forth_mini\\obj\\publish\\win-x64\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
