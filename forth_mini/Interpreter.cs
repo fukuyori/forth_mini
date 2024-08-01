@@ -107,6 +107,11 @@ namespace forth_mini {
                 var b = Convert.ToDouble(stack.Pop());
                 stack.Push(Math.Pow(b, a));
             };
+            // 符号を変える
+            words["minus"] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                stack.Push(-(a));
+            };
             // nPr
             words["npr"] = () => {
                 var a = Convert.ToDouble(stack.Pop());
@@ -196,6 +201,16 @@ namespace forth_mini {
             words["dup"] = () => {
                 var a = stack.Peek();
                 stack.Push(a);
+            };
+            words["-dup"] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                if (a != 0)
+                    stack.Push(a);
+            };
+            words["?dup"] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                if (a != 0)
+                    stack.Push(a);
             };
             words["rot"] = () => {
                 var a = stack.Pop();
@@ -323,6 +338,16 @@ namespace forth_mini {
                     stack.Push(loopStack.Peek());
                 } else {
                     throw new InvalidOperationException("No loop index available");
+                }
+            };
+            // words コマンドの追加
+            words["words"] = () => {
+                var allWords = new List<string>(words.Keys);
+                allWords.AddRange(userWords.Keys);
+                allWords.Sort();
+
+                foreach (var word in allWords) {
+                    Console.WriteLine(word);
                 }
             };
         }
