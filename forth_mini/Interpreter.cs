@@ -35,7 +35,9 @@ namespace forth_mini {
             // .S コマンドの追加（スタックの内容を表示）
             words[".s"] = () => {
                 Console.Write($"<{stack.Count}> ");
-                foreach (var item in stack.ToArray()) {
+                Array _ = stack.ToArray();
+                Array.Reverse(_);
+                foreach (var item in _) { 
                     Console.Write($"{item} ");
                 }
                 Console.WriteLine();
