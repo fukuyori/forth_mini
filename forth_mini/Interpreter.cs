@@ -30,7 +30,17 @@ namespace forth_mini {
         }
 
         private void RegisterBasicWords() {
-            words["."] = () => Console.WriteLine(stack.Pop());
+            words["."] = () =>
+                Console.Write(stack.Pop() + " ");
+            // .S コマンドの追加（スタックの内容を表示）
+            words[".s"] = () => {
+                Console.Write($"<{stack.Count}> ");
+                foreach (var item in stack.ToArray()) {
+                    Console.Write($"{item} ");
+                }
+                Console.WriteLine();
+            };
+
             words["+"] = () => {
                 var a = Convert.ToDouble(stack.Pop());
                 var b = Convert.ToDouble(stack.Pop());
@@ -51,7 +61,18 @@ namespace forth_mini {
                 var b = Convert.ToDouble(stack.Pop());
                 stack.Push(b / a);
             };
-            words["pi"] = () => {
+            words["mod"] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                var b = Convert.ToDouble(stack.Pop());
+                stack.Push(b % a);
+            };
+            words["/mod"] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                var b = Convert.ToDouble(stack.Pop());
+                stack.Push(b % a);
+                stack.Push(Math.Floor(b / a));
+            };
+            words["wi"] = () => {
                 stack.Push(Math.PI);
             };
             words["e"] = () => {

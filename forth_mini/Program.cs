@@ -49,6 +49,10 @@ namespace forth_mini {
             }
             stack.Push(value);
         }
+
+        public object[] ToArray() {
+            return stack.ToArray();
+        }
     }
 
     public class Compiler {
@@ -77,6 +81,9 @@ namespace forth_mini {
             while ((input = Console.ReadLine()) != "exit") {
                 try {
                     compiler.Compile(input);
+                    if (Console.CursorLeft != 0) {
+                        Console.WriteLine();
+                    }
                 } catch (Exception ex) {
                     Console.WriteLine($"Error: {ex.Message}");
                 }
