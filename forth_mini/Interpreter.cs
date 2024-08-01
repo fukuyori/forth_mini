@@ -251,10 +251,8 @@ namespace forth_mini {
                 stack.Push(b);
             };
             words["over"] = () => {
-                var a = stack.Pop();
-                var b = stack.Peek();
+                var a = stack.Pick(1);
                 stack.Push(a);
-                stack.Push(b);
             };
             words["tuck"] = () => {
                 var a = stack.Pop();
@@ -288,6 +286,17 @@ namespace forth_mini {
                 var b = Convert.ToDouble(stack.Pop());
                 stack.Push(b > a ? -1 : 0);
             };
+            words["<="] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                var b = Convert.ToDouble(stack.Pop());
+                stack.Push(b <= a ? -1 : 0);
+            };
+            words[">="] = () => {
+                var a = Convert.ToDouble(stack.Pop());
+                var b = Convert.ToDouble(stack.Pop());
+                stack.Push(b >= a ? -1 : 0);
+            };
+
 
             // 文字列操作の基本的な単語を追加
             words["concat"] = () => {
