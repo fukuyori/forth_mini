@@ -81,7 +81,7 @@
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
-    "version": "0.5.4",
+    "version": "0.6.0",
     "restore": {
       "projectUniqueName": "C:\\Users\\n_fuk\\source\\repos\\forth_mini\\forth_mini\\forth_mini.csproj",
       "projectName": "forth_mini",
