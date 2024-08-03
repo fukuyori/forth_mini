@@ -48,16 +48,19 @@ namespace forth_mini {
             return tokenQueue.Dequeue();
         }
 
-        private List<string> CaptureLoopTokens(string endToken) {
+        private List<string> CaptureLoopTokens(params string[] endTokens) {
             var tokens = new List<string>();
             int nestedLoops = 0;
             while (true) {
                 var token = GetNextToken();
-                if (token == null) throw new InvalidOperationException($"Unmatched loop token: {endToken}");
+                if (token == null) throw new InvalidOperationException($"Unmatched loop token: {string.Join(", ", endTokens)}");
 
-                if (token == "do" || token == "begin" || token == "while") nestedLoops++;
-                else if (token == endToken) {
-                    if (nestedLoops == 0) break;
+                if (token == "do") nestedLoops++;
+                else if (endTokens.Contains(token)) {
+                    if (nestedLoops == 0) {
+                        tokens.Add(token); // +loop または loop を追加
+                        break;
+                    }
                     nestedLoops--;
                 }
 

@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "OgeteoaSq6eZR4e/AJ9i0UJIIZ5ugLBn+VlDOlCdmHdV5bzPBhZu+L6RXvQS0/oydeyYdho1b85jd2FrE4CTXg==",
+  "dgSpecHash": "+O4WmAHqW4A=",
   "success": true,
   "projectFilePath": "C:\\Users\\n_fuk\\source\\repos\\forth_mini\\forth_mini\\forth_mini.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.4\\microsoft.net.illink.tasks.8.0.4.nupkg.sha512",
-    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.4\\microsoft.netcore.app.runtime.win-x64.8.0.4.nupkg.sha512",
-    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.4\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.4.nupkg.sha512",
-    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.4\\microsoft.aspnetcore.app.runtime.win-x64.8.0.4.nupkg.sha512"
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.7\\microsoft.net.illink.tasks.8.0.7.nupkg.sha512",
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.7\\microsoft.netcore.app.runtime.win-x64.8.0.7.nupkg.sha512",
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.7\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.7.nupkg.sha512",
+    "C:\\Users\\n_fuk\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.7\\microsoft.aspnetcore.app.runtime.win-x64.8.0.7.nupkg.sha512"
   ],
   "logs": []
 }

@@ -15,7 +15,7 @@ namespace forth_mini {
                 Console.Write($"<{stack.Count}> ");
                 Array _ = stack.ToArray();
                 Array.Reverse(_);
-                foreach (var item in _) { 
+                foreach (var item in _) {
                     Console.Write($"{item} ");
                 }
                 Console.WriteLine();
@@ -311,15 +311,22 @@ namespace forth_mini {
             words["do"] = () => {
                 var loopEnd = Convert.ToInt32(stack.Pop());
                 var loopStart = Convert.ToInt32(stack.Pop());
-                var loopTokens = CaptureLoopTokens("loop");
+                var loopTokens = CaptureLoopTokens("loop", "+loop");
 
-                for (var i = loopStart; i < loopEnd; i++) {
+                var i = loopStart;
+                while (i < loopEnd) {
                     loopStack.Push(i);
                     ExecuteTokens(loopTokens);
                     loopStack.Pop();
+                    if (loopTokens.Last() == "+loop") 
+                        i += Convert.ToInt32(stack.Pop());
+                    else
+                        i++;
                 }
             };
             words["loop"] = () => { };
+
+            words["+loop"] = () => { };
 
             words["begin"] = () => {
                 var loopTokens = CaptureLoopTokens("until");

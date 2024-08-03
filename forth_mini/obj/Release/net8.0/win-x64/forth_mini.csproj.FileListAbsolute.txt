@@ -181,7 +181,6 @@ C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\cre
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\hostfxr.dll
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\hostpolicy.dll
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\mscordaccore.dll
-C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\mscordaccore_amd64_amd64_8.0.424.16909.dll
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\mscordbi.dll
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\mscorrc.dll
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\msquic.dll
@@ -196,3 +195,4 @@ C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Release\net8.0\win-x64\ref
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Release\net8.0\win-x64\forth_mini.pdb
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Release\net8.0\win-x64\forth_mini.genruntimeconfig.cache
 C:\Users\n_fuk\source\repos\forth_mini\forth_mini\obj\Release\net8.0\win-x64\ref\forth_mini.dll
+C:\Users\n_fuk\source\repos\forth_mini\forth_mini\bin\Release\net8.0\win-x64\mscordaccore_amd64_amd64_8.0.724.31311.dll
